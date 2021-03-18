@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 
 const db = {};
 db.mongoose = mongoose;
-db.url = dbConfig.url;
-db.tutorials = require("./mytodomodel.js");
+db.url = dbconfig.url;
+db.todolist = require("./mytodomodel.js")(mongoose);
 
 module.exports = db;

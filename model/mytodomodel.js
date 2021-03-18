@@ -6,11 +6,15 @@ var TodoListSchema = new Schema({
     type: String,
     require: "name is required",
   },
+  description: {
+    type: String,
+    require: "description is required",
+  },
   status: {
     type: [
       {
         type: String,
-        enum: ["prnding", "doing", "done"],
+        enum: ["pending", "doing", "done"],
       },
     ],
     default: ["doing"],
